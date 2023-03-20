@@ -1,4 +1,6 @@
 import React from 'react'
+import { SectionWrapper } from '../loc'
+
 
 const Demo = () => {
   return (
@@ -6,4 +8,4 @@ const Demo = () => {
   )
 }
 
-export default Demo
+export default SectionWrapper(Demo,"")

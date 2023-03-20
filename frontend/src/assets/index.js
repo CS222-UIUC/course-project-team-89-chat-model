@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import chat_icon from './chat_icon.png';
 import chat from './chat.png';
+import ai from './AI.avif';
 
 import backend from "./backend.png";
 import creator from "./creator.png";
@@ -34,6 +35,7 @@ import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
 export {
+  ai,
   logo,
   chat_icon,
   chat,
