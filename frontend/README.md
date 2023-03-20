@@ -1,9 +1,18 @@
-Front-end is implemented using Vite.js, it is looking something like this, both looks good in PC and mobile:
+Front-end is implemented using Vite.js, the structure of this:
 
-![](https://github.com/CS222-UIUC/course-project-team-89-chat-model/blob/master/frontend/imgmd/2.png)
+- Navbar: Help to navigate to some important sections
+- About: A brief introduction to our project
+- Demo: Try our project
+- Experience: User experience
+- Teams: Team members
+- Feedbacks: User feedbacks
+- Contact: If users have any questions, feel free to contact us
 
+![](https://github.com/CS222-UIUC/course-project-team-89-chat-model/blob/master/frontend/imgmd/1_1.png)
 
+![](https://github.com/CS222-UIUC/course-project-team-89-chat-model/blob/master/frontend/imgmd/1_2.png)
 
-It also has a menu tab that can helps you direct to another section
+![](https://github.com/CS222-UIUC/course-project-team-89-chat-model/blob/master/frontend/imgmd/1_3.png)
 
-![](https://github.com/CS222-UIUC/course-project-team-89-chat-model/blob/master/frontend/imgmd/1.png)
+![](https://github.com/CS222-UIUC/course-project-team-89-chat-model/blob/master/frontend/imgmd/1_4.png)
+
