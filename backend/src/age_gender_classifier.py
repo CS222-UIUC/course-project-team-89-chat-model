@@ -4,17 +4,17 @@
 #user specifies these parameters on the site
 # TODO: fetch these values using API, input into file
 
-data_file = 'age_gender.csv'
-cols_to_drop = ['img_name']
-to_pred = ['gender', 'age', 'ethnicity']
-opt = 'sgd'
-max_acceptable_loss_1 = 0.25
-min_acc_2 = 0.8
-val_loss_3 = 110
-epoch_no_1 = 20
-epoch_no_2 = 16
-epoch_no_3 = 16
-test_image_classify = "SameerKomoravoluBW.jpg"
+data_file = 'spc0'
+cols_to_drop = ['spc1']
+to_pred = ['spc2']
+opt = 'spc3'
+max_acceptable_loss_1 = spc4
+min_acc_2 = spc5
+val_loss_3 = spc6
+epoch_no_1 = spc7
+epoch_no_2 = spc8
+epoch_no_3 = spc8
+test_image_classify = "spc9"
 
 
 

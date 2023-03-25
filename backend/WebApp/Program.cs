@@ -19,3 +19,5 @@ app.UseAuthorization();
 app.MapRazorPages();
 
 app.Run();
+
+MLFileWriter mlFileWriter = new MLFileWriter(new List<string>() { "invalid_init" });
