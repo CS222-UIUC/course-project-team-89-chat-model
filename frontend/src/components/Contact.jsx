@@ -34,7 +34,7 @@ const Contact = () => {
     )
       .then(() => {
         setLoading(false);
-        alert('Thx! Will get back to u ASAP');
+        alert('Received your message! We will call you back ASAP!');
 
         setForm({
           name: '',
