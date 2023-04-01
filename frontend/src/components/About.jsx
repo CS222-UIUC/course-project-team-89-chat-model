@@ -8,24 +8,23 @@ const About = () => {
     <>
       <img src={ai} alt="AI Chat Model" className='w-full' />
       <div>
-        <h1 className={`${styles.heroHeadText} text-white`}>Hi, It's <span className='text-[#915eff]'>Chat Model</span> </h1>
+        <h1 className={`${styles.heroHeadText} text-white`}>The future of AI <span className='text-[#915eff]'>Chat Models</span> </h1>
         <p className={`${styles.heroSubText} mt-2 text-white-100 mb-5`}>
-          An AI-based platform, <br className='sm:block hidden' />provides executable classifiers.
+          An AI-run service that <br className='sm:block hidden' />provides executable models.
         </p>
       </div>
       <p className={styles.sectionSubText}>Introduction</p>
       <p className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] mb-5'>
-        Nowadays, especially with the introduction of OpenAI’s Chat GPT-3 model into mainstream media,
-        artificial intelligence is becoming an even bigger tool used for a wide variety of tasks,
-        and those who are unfamiliar with software engineering and data science are being left behind
-        by the daunting field, unable to use/understand AI for their own interests. To tackle this
-        issue, we propose building a highly interactive website in which users can specify dimensions
-        and parameters to a neural network, along with providing a dataset to train their model on.
-        Our product aims to save the trained weights of the model to provide an executable
-        classifier/regressor along with generated code for the AI based on the specifications.
-        Ideally, our software would decrease the difficulty of implementing machine learning,
-        much as Scratch decreased the difficulty of algorithmic thinking.
+        In the modern era, artificial intelligence and machine learning are becoming larger and more popular
+        tools for a variety of tasks. In particular, the introduction of OpenAI's ChatGPT has shown the
+        possibilities of modern machine learning models. We fear that those who are unfamiliar with software
+        engineering and data science will be left behind by this advancing era, unable to adapt to using AI
+        or even understand how it works.
 
+        To tackle this issue, our website aims to provide users an easy way to create machine learning code.
+        Users can specify dimensions and parameters to a neural network and provide a dataset for the AI to
+        train their model on. Our site will generate the code for a basic AI model based on the inputs the
+        user provided.
       </p>
     </>
   )
