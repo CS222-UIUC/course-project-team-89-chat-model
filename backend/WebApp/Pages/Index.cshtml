@@ -1,25 +1,49 @@
 @page
 @model IndexModel
-@{
-    ViewData["Title"] = "Home page";
-    var factorial = 1; var mult = 2;
-    while (factorial < 1000000) {
-        factorial *= mult;
-        ++mult;
-    }
-    --mult;
-}
 
 <div class="text-center">
-    <h1>Hello, world!</h1>
     <p>The time on the server is @DateTime.Now</p>
-    <p>The first factorial number after 1,000,000 is @mult! = @factorial.</p>
 </div>
 
-<!-- basic form -->
+<!-- form for inline parameters 0 through 9 -->
 <div class="text-center">
-    <form action="/ViewCode" method="post">
-        <input type="text" name="name" />
+    <form method="post">
+        <input type="text" name="par0" placeholder="Data FileName" />
+        <input type="text" name="par1" placeholder="Columns to Drop" />
+        <input type="text" name="par2" placeholder="Column to Predict" />
+        <br>
+        <input type="text" name="par3" placeholder="Optimizer" />
+        <input type="text" name="par4" placeholder="Loss Tolerance 1" />
+        <input type="text" name="par5" placeholder="Loss Tolerance 2" />
+        <input type="text" name="par6" placeholder="Loss Tolerance 3"/>
+        <br>
+        <input type="text" name="par7" placeholder="Epoch No1" />
+        <input type="text" name="par8" placeholder="Epoch No2" />
+        <input type="text" name="par9" placeholder="Epoch No3" />
+        <br><br>
         <input type="submit" value="Submit" />
+        <input type="button" value="Defaults" />
     </form>
 </div>
+
+@{
+    if (Request.Method == "POST") {
+        var par0 = Request.Form["par0"];
+        var par1 = Request.Form["par1"];
+        var par2 = Request.Form["par2"];
+        var par3 = Request.Form["par3"];
+        var par4 = Request.Form["par4"];
+        var par5 = Request.Form["par5"];
+        var par6 = Request.Form["par6"];
+        var par7 = Request.Form["par7"];
+        var par8 = Request.Form["par8"];
+        var par9 = Request.Form["par9"];
+
+        var specs = new List<string>() { par0, par1, par2, par3, par4, par5, par6, par7, par8, par9 };
+
+        MLFileWriter mlFileWriter = new MLFileWriter(specs);
+        var code = mlFileWriter.getCode();
+
+        <div style="white-space: pre-wrap; margin-left: 25%;">@code</div>
+    }
+}

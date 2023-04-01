@@ -2,9 +2,15 @@
 //this is a class that is used to produce machine learning code and write to a file
 class MLFileWriter {
     public static string path;
+    private static string code;
     public MLFileWriter(List<string> specifications, string p = "file.py") {
         path = p;
-        WriteToFile(generateCode(specifications));
+        code = generateCode(specifications);
+        WriteToFile(code);
+    }
+
+    public string getCode() {
+        return code;
     }
 
     //this method generates the code for the machine learning file
