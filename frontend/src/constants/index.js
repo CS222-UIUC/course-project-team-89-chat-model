@@ -42,7 +42,7 @@ export const navLinks = [
     id: "contact",
     title: "Contact",
   },
-  
+
 ];
 
 const services = [
@@ -177,7 +177,7 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
+      "I thought it was impossible to make a website to generate such an amazing AI code.",
     name: "Sara Lee",
     designation: "CFO",
     company: "Acme Co",
@@ -185,7 +185,7 @@ const testimonials = [
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
+      "I've never met an intelligent web that can be so smart and convenient to help me obtain the code I want.",
     name: "Chris Brown",
     designation: "COO",
     company: "DEF Corp",
@@ -193,7 +193,7 @@ const testimonials = [
   },
   {
     testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
+      "This website made By Sam, Rice, and Jiayuan is fantastic, their product helped our company a lot.",
     name: "Lisa Wang",
     designation: "CTO",
     company: "456 Enterprises",
