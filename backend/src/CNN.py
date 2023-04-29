@@ -8,7 +8,7 @@ epoch_no_1 = spc5
 test_image_classify = "spc6"
 imgx = spc7
 imgy = spc8
-conv_layers = spc9 #3
+conv_layers = spc9
 
 
 
