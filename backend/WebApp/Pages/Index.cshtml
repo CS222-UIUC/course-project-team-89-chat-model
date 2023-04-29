@@ -21,7 +21,8 @@
         <input type="text" name="par8" placeholder="Epoch No2" />
         <input type="text" name="par9" placeholder="Epoch No3" />
         <br><br>
-        <input name="submit" type="submit" id="submit" value="Submit" />
+        <input name="submit" type="submit" id="submit1" value="Generate CNN Code" />
+        <input name="submit" type="submit" id="submit2" value="Generate ANN Code" />
         <input name="submit" type="submit" id="deft" value="Defaults" />
     </form>
 </div>
@@ -32,21 +33,33 @@
 
         if (Request.Form["submit"] == "Defaults") {
             <div style="border-style: solid; border-width: 2px; white-space: pre-wrap; padding-left: 5%; padding-right: 5%; padding-top: 2%; margin-top: 2%; margin-left: 25%; margin-right: 25%; background-color: #1c015b; color: #ffffff; ">
-                UPDATE THE FORM WITH THE FOLLOWING VALUES:
+                FOR A CONVOLUTIONAL NEURAL NETWORK, UPDATE THE FORM WITH THE FOLLOWING VALUES AND CLICK "GENERATE CNN CODE":
 
-                "age_gender.csv", 
-                "img_name", 
-                "gender", 
-                "sgd", 
-                "0.25", 
-                "20", 
-                "48", 
-                "48", 
-                "SameerKomoravoluBW.jpg"
+                "age_gender.csv", (the training data)
+                "img_name", (the column to drop)
+                "gender", (the column to predict)
+                "sgd", (the optimizer)
+                "0.25", (the loss tolerance)
+                "20", (the number of epochs)
+                "ImgBW.jpg", (the test image)
+                "48", (the image width)
+                "48", (the image height)
+                "3" (the number of CNN layers)
+
+                FOR AN ARTIFICIAL NEURAL NETWORK, UPDATE THE FORM WITH THE FOLLOWING vALUES AND CLICK "GENERATE ANN CODE":
+                "banknote.csv", (the training data)
+                "class", (the column to predict)
+                "0.1", (the dropout rate)
+                "0.001", (the learning rate)
+                "[12, 6, 1]", (the number of neurons in each layer)
+                "20", (the number of epochs)
+                "4" (the batch size)
+                (leave pars 7-9 blank)
+                
             </div>
 
         }
-        else if (Request.Form["submit"] == "Submit") {
+        else if (Request.Form["submit"] == "Generate CNN Code") {
             var par0 = Request.Form["par0"];
             var par1 = Request.Form["par1"];
             var par2 = Request.Form["par2"];
@@ -61,6 +74,25 @@
             var specs = new List<string>() { par0, par1, par2, par3, par4, par5, par6, par7, par8, par9 };
 
             MLFileWriter mlFileWriter = new MLFileWriter(specs);
+            var code = mlFileWriter.getCode();
+
+            <div style="border-style: solid; border-width: 2px; white-space: pre-wrap; padding-left: 5%; padding-right: 5%; padding-top: 2%; margin-top: 2%; margin-left: 25%; margin-right: 25%; background-color: #1c015b; color: #ffffff; ">@code</div>
+        }
+        else if (Request.Form["submit"] == "Generate ANN Code") {
+            var par0 = Request.Form["par0"];
+            var par1 = Request.Form["par1"];
+            var par2 = Request.Form["par2"];
+            var par3 = Request.Form["par3"];
+            var par4 = Request.Form["par4"];
+            var par5 = Request.Form["par5"];
+            var par6 = Request.Form["par6"];
+            var par7 = Request.Form["par7"];
+            var par8 = Request.Form["par8"];
+            var par9 = Request.Form["par9"];
+
+            var specs = new List<string>() { par0, par1, par2, par3, par4, par5, par6, par7, par8, par9 };
+
+            MLFileWriter mlFileWriter = new MLFileWriter(specs, "file.py", "ANN");
             var code = mlFileWriter.getCode();
 
             <div style="border-style: solid; border-width: 2px; white-space: pre-wrap; padding-left: 5%; padding-right: 5%; padding-top: 2%; margin-top: 2%; margin-left: 25%; margin-right: 25%; background-color: #1c015b; color: #ffffff; ">@code</div>
