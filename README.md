@@ -14,7 +14,9 @@ The final output is generated in a large blue box for the user to view. The fiel
 The frontend is created using ReactJS. It was created to be appealing and easy to use for those with no software engineering knowledge.
 
 ### Installation Instructions
-...
+To use our application, you need to download the zipped file containing our code. To view our frontend landing page and use functionality like contacting us, you would need to run "npm install" and "npm run dev". After this, click on the link in the terminal and that will take you to the home page.
+
+To use the code generator widget, you would need to navigate into the backend/WebApp directory and run dotnet watch. This will open up the widget, and you can enter parameters or view the defaults like in the demo.
 
 
 ### Group Members:
