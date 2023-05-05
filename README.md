@@ -3,6 +3,7 @@ This is team 89.
 ChatModel is a widget that can generate machine learning code. We decided to create this project to assist those who are unfamiliar with software engineering and data science, so that they may also create their own machine learning programs with little experience or prior knowledge necessary.
 
 ### Technical Architecture
+<img width="813" alt="image" src="https://user-images.githubusercontent.com/93094773/236378918-446faf9f-bfaf-4039-955b-dc01452f517d.png">
 
 #### Frontend
 Navbar: This can direct to any page that we want and it fits in all devices’ displays. It allows users to navigate our site and links to the other components. It is written in JavaScript XML, and I worked on it.
